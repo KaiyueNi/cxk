@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import Welcome from './components/Welcome/index.jsx';
 
 export default class App extends Component {
   render () {
-    return <h2>test github</h2>
+    return (
+      <div>
+        <Welcome/>
+      </div>
+    )
   }
 }
