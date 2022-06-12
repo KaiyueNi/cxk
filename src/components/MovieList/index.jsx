@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { EditOutlined, SmileOutlined, HeartOutlined, HeartFilled } from '@ant-design/icons';
+import { HeartOutlined, HeartFilled } from '@ant-design/icons';
 import { Card, Rate } from 'antd';
 import './index.scss';
 
@@ -71,7 +71,7 @@ export default class index extends Component {
           </Card>
         )
         )}
-        <i></i><i></i><i></i><i></i><i></i>
+        <i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i>
       </div>
     )
   }
