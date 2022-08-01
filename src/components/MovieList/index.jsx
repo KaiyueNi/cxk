@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { HeartOutlined, HeartFilled } from '@ant-design/icons';
 import { Card, Rate } from 'antd';
 import './index.scss';
@@ -47,32 +47,30 @@ const cardlist = [
   }
 ];
 
-export default class index extends Component {
-  render () {
-    return (
-      <div className='cardlist'>
-        {cardlist.map((item, index) => (
-          <Card
-            key={index}
-            hoverable
-            className='oneCard'
-            // actions={[
-            //   <HeartOutlined key="like" />,
-            //   <SmileOutlined  key="ellipsis"/>
-            // ]}
-            cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-          >
-            <Meta title={item.title} />
-            <Rate disabled allowHalf defaultValue={item.data} />
-            <span className="ant-rate-text">{item.data}</span>
-            {item.like ? <HeartOutlined />
-              : <HeartFilled className='like' />}
-            {/* <SmileOutlined  key="ellipsis"/> */}
-          </Card>
-        )
-        )}
-        <i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i>
-      </div>
-    )
-  }
+export default function MovieList () {
+  return (
+    <div className='cardlist'>
+      {cardlist.map((item, index) => (
+        <Card
+          key={index}
+          hoverable
+          className='oneCard'
+          // actions={[
+          //   <HeartOutlined key="like" />,
+          //   <SmileOutlined  key="ellipsis"/>
+          // ]}
+          cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+        >
+          <Meta title={item.title} />
+          <Rate disabled allowHalf defaultValue={item.data} />
+          <span className="ant-rate-text">{item.data}</span>
+          {item.like ? <HeartOutlined />
+            : <HeartFilled className='like' />}
+          {/* <SmileOutlined  key="ellipsis"/> */}
+        </Card>
+      )
+      )}
+      <i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i>
+    </div>
+  )
 }
